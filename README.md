@@ -4,11 +4,9 @@
 </a>
 </div>
 
-<h3 align="center">Numi</h3>
-
-<p align="center">A language for software development.
-    <br> 
-</p>
+# Numi
+Numi is a general-purpose, high-level and object-oriented programming language.
+It compiles to C++ and allows compatibility with it.
 
 ## Building
 
@@ -28,7 +26,7 @@ WIP...
 
 - [ ] Turing-complete
 - [ ] Self-hosted
-- [ ] Close to C++'s convenience and speed
+- [ ] Close to C++' convenience and speed
 
 ## License
 
