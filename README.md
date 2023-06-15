@@ -6,7 +6,7 @@
 
 # Numi
 Numi is a general-purpose, high-level and object-oriented programming language.
-It compiles to C++ and allows compatibility with it.
+It compiles to C and allows compatibility with it.
 
 ## Building
 
@@ -26,7 +26,7 @@ WIP...
 
 - [ ] Turing-complete
 - [ ] Self-hosted
-- [ ] Close to C++' convenience and speed
+- [ ] Close to C convenience and speed
 
 ## License
 
