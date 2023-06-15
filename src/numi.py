@@ -21,7 +21,7 @@ class Numi:
         self.ast    = self.parser.generateAST()
         
         # Compiler
-        self.compiler = Compiler(self._file())
+        self.compiler = Compiler(self._file(), self.ast)
     
     def _file(self):
         # handle /
