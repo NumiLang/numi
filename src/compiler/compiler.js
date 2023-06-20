@@ -7,7 +7,7 @@ class Compiler {
     }
 
     compile() {
-        this.emitter.emit_header_line("#include <stdio.h>")
+        this.emitter.emit_header("#include <stdio.h>")
         this.emitter.emit_line("int main(int argc, char** argv) {")
         this.emitter.emit_line("    return 0;")
         this.emitter.emit_line("}")

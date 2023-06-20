@@ -25,13 +25,14 @@ class Emitter {
     }
 
     write_file() {
-        try {
-            // Creates file if it doesn't exist and opens it in (over)write mode
-            fs.writeFile(`${this.file}.c`, `${this.header}\n${this.code}`, { encoding: "utf-8", flag: "w+"})
-        } catch(error) {
-            console.error("ERROR: something went wrong during compilation.")
-            process.exit(1)
-        }
+        // Creates file if it doesn't exist and opens it in (over)write mode
+        fs.writeFile(`${this.file}.c`, `${this.header}\n${this.code}`,
+        (error) => {
+            if (error) {
+                console.error("ERROR: something went wrong during compilation.")
+                process.exit(1)
+            }
+        })
     }
 }
 

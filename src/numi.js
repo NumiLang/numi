@@ -2,10 +2,11 @@ const { Content } = require("./utils/fileIO")
 const { Lexer } = require("./parser/lexer/lexer")
 const { Parser } = require("./parser/parser")
 const { Compiler } = require("./compiler/compiler")
+const path = require("path")
 
 class Numi {
-    constructor(path) {
-        this.path = path.toString()
+    constructor(filePath) {
+        this.path = filePath
         
         // Content
         this.content = new Content(this.path)
@@ -21,27 +22,7 @@ class Numi {
         this.ast    = this.parser.generateAST()
         
         // Compiler
-        this.compiler = new Compiler(this._file(), this.ast)
-    }
-
-
-    // FIXME: not working
-    _file() {
-        let _ret
-
-        // handle `/`
-        if (this.path.includes("/")) {
-            _ret = this.path.split("/")[-1]
-        // handle `\`    
-        } else if (this.path.includes("\\")) {
-            _ret = this.path.split("\\")[-1]
-        }
-
-        if (_ret.includes(".")) {
-            _ret = _ret.split(".")[0]
-        }
-        
-        return _ret
+        this.compiler = new Compiler(path.parse(this.path).name, this.ast)
     }
 
     dump_tokens() {
@@ -64,7 +45,6 @@ module.exports = {
 
 if (require.main === module) {
     const process = require("process")
-    const path = require("path")
 
     console.error(`ERROR: \`${path.parse(__filename).name}\` file can\'t be ran as main.`)
     process.exit(1)
