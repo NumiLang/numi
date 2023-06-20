@@ -25,14 +25,13 @@ class Emitter {
     }
 
     write_file() {
-        // Creates file if it doesn't exist and opens it in (over)write mode
-        fs.writeFile(`${this.file}.c`, `${this.header}\n${this.code}`,
-        (error) => {
-            if (error) {
-                console.error("ERROR: something went wrong during compilation.")
-                process.exit(1)
-            }
-        })
+        try {
+            fs.writeFileSync(`${this.file}.c`, `${this.header}\n${this.code}`)
+        } catch(error) {
+            console.error("ERROR: something went wrong during compilation.", err)
+            console.error(error)
+            process.exit(1)
+        }
     }
 }
 
