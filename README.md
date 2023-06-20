@@ -5,6 +5,9 @@
 </div>
 
 # Numi
+
+![](https://tokei.rs/b1/github/NumiLang/numi)
+
 Numi is a general-purpose and high-level programming language.
 It compiles to C and allows compatibility with it.
 
