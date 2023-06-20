@@ -1,0 +1,13 @@
+{
+  "name": "numi",
+  "version": "1.0.0",
+  "description": "A general-purpose and high-level programming language that compiles to C",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "NumiLang",
+  "license": "MIT",
+  "dependencies": {
+    "ini": "^4.1.1"
+  }
+}
