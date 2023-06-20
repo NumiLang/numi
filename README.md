@@ -6,6 +6,8 @@
 
 # Numi
 
+![Made with JavaScript](https://img.shields.io/badge/Made%20with-JavaScript-blue.svg)
+![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)
 ![Lines of Code](https://tokei.rs/b1/github/NumiLang/numi?category=code)
 
 Numi is a general-purpose and high-level programming language.
@@ -33,4 +35,4 @@ WIP...
 
 ## License
 
-[MIT](https://github.com/NumiLang/numi/blob/main/LICENSE)
+Released under [MIT](/LICENSE) by [@NumiLang](https://github.com/NumiLang).
