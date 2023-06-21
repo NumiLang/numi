@@ -1,9 +1,13 @@
 const { Emitter } = require("./emitter")
+const { Codegen } = require("./codegen")
+const { Stmt, Program, Expr, BinaryExpr, Identifier, NumericLiteral, NullLiteral } = require("../parser/ast")
 
 class Compiler {
-    constructor(file, ast) {
+    constructor(path, file, ast) {
+        this.path = path
         this.emitter = new Emitter(file)
         this.ast = ast
+
     }
 
     compile() {

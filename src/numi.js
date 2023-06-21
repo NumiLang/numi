@@ -14,19 +14,19 @@ class Numi {
 
         // Lexer
         this.lexer  = new Lexer(this.path, this.source)
-        this.tokens = this.lexer.lex() // FIXME: Parser consumes tokens, therefore only EOF is shown in dump tokens.
-
+        this.tokens = this.lexer.lex()
+        this.tokens_cpy = this.tokens.slice() // FIXME: Parser consumes tokens, therefore only EOF is shown in dump tokens.
         
         // Parser
-        this.parser = new Parser(this.path, this.tokens)
+        this.parser = new Parser(this.path, this.tokens_cpy)
         this.ast    = this.parser.generateAST()
         
         // Compiler
-        this.compiler = new Compiler(path.parse(this.path).name, this.ast)
+        this.compiler = new Compiler(this.path, path.parse(this.path).name, this.ast)
     }
 
     dump_tokens() {
-        return console.log(JSON.stringify(this.tokens, null, 4))
+        return console.log(this.tokens)
     }
 
     dump_ast() {
