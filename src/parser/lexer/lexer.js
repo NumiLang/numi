@@ -74,7 +74,7 @@ class Lexer {
     }
 
     eat_whitespaces() {
-        while (this.spaces.includes(this.buffer[0]) && !isEOF(this.buffer[0])) {
+        while (this.spaces.some((k) => k == this.buffer[0]) && !isEOF(this.buffer[0])) {
             this.advance()
         }
     }
@@ -313,7 +313,7 @@ class Lexer {
 
                 this.tokens.push(new Token(this.advance(), TokenType.Mod, loc.line, loc.col))
             // L_String
-            } else if (this.strings.includes(this.buffer[0])) {
+            } else if (this.strings.some((k) => k == this.buffer[0])) {
                 this.make_string()
             } else {
 

@@ -15,7 +15,7 @@ class Numi {
         // Lexer
         this.lexer  = new Lexer(this.path, this.source)
         this.tokens = this.lexer.lex()
-        this.tokens_cpy = this.tokens.slice() // FIXME: Parser consumes tokens, therefore only EOF is shown in dump tokens.
+        this.tokens_cpy = this.tokens.slice()
         
         // Parser
         this.parser = new Parser(this.path, this.tokens_cpy)

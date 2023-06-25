@@ -97,6 +97,7 @@ class Parser {
                 return new Identifier(this.advance().value)
 
             case TokenType.Null:
+                this.advance()
                 return new NullLiteral()
 
             case TokenType.Integer:
