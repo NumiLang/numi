@@ -23,7 +23,7 @@ WIP...
 
 ## Roadmap
 
-- [ ] Lexing
+- [X] Lexing
 - [ ] Parsing
 - [ ] Compiler
 
