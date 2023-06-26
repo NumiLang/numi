@@ -2,12 +2,18 @@
   "name": "numi",
   "version": "1.0.0",
   "description": "A general-purpose and high-level programming language that compiles to C",
+  "homepage": "https://github.com/NumiLang/numi",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo TODO && exit 1",
+    "build": "node build.js"
   },
   "author": "NumiLang",
   "license": "MIT",
   "dependencies": {
     "ini": "^4.1.1"
+  },
+  "devDependencies": {
+    "gulp": "^4.0.2",
+    "gulp-header": "^2.0.9"
   }
 }

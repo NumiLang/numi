@@ -22,7 +22,7 @@ class Numi {
         this.ast    = this.parser.generateAST()
         
         // Compiler
-        this.compiler = new Compiler(this.path, path.parse(this.path).name, this.ast)
+        this.compiler = new Compiler(this.path, path.parse(this.path).name)
     }
 
     dump_tokens() {
@@ -34,7 +34,7 @@ class Numi {
     }
 
     compile() {
-        this.compiler.compile()
+        return console.log(this.compiler.compile(this.ast)) // temp
     }
 
 }
