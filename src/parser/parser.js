@@ -116,7 +116,7 @@ class Parser {
 
             default:
                 const error = this.advance()
-                new Error(this.path, error.loc.line, error.loc.col, "Unexpected token", `Unexpected token: \`${error.value}\``) 
+                new Error(this.path, error.loc.line, error.loc.col, "Unexpected token", `Unexpected token: \`${error.value}\`.`) 
         }
     }
 }

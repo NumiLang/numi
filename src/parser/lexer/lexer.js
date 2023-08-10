@@ -110,7 +110,7 @@ class Lexer {
         }
         
         if (!isValidNum(number)) {
-            new Error(this.path, loc.line, loc.col, "Invalid number", `Invalid number found: \`${number}\``)
+            new Error(this.path, loc.line, loc.col, "Invalid number", `Invalid number found: \`${number}\`.`)
         }
 
         if (number.includes(".")) {
@@ -330,7 +330,7 @@ class Lexer {
                 } else {
                     const loc = this.loc_cpy()
 
-                    new Error(this.path, loc.line, loc.col, "Illegal character", `Invalid character found: ${this.advance()}`)
+                    new Error(this.path, loc.line, loc.col, "Illegal character", `Invalid character found: ${this.advance()}.`)
                 }
             }
         }
